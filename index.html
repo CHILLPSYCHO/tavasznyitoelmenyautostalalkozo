@@ -25,13 +25,13 @@
         
         main { flex: 1; display: flex; flex-direction: column; }
 
-        /* --- LANGUAGE TOGGLE CSS --- */
+
         .lang { display: contents; }
         .lang.en { display: none; }
         body.lang-en .lang.hu { display: none; }
         body.lang-en .lang.en { display: contents; }
 
-        /* Navigation */
+
         nav { position: fixed; top: 0; width: 100%; background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(8px); height: var(--nav-height); display: flex; justify-content: space-between; align-items: center; padding: 0 30px; z-index: 1000; border-bottom: 2px solid var(--primary-color); }
         .nav-brand { font-weight: bold; font-size: 1.4rem; color: white; display: flex; align-items: center; gap: 12px; }
         .nav-links { display: flex; gap: 5px; flex-wrap: wrap; }
@@ -39,7 +39,7 @@
         .nav-links button:hover { color: white; }
         .nav-links button.active { color: white; background: rgba(37, 99, 235, 0.2); }
 
-        /* Floating Share Button */
+
         .fab-share {
             position: fixed; bottom: 30px; left: 30px; z-index: 999;
             width: 50px; height: 50px; border-radius: 50%;
@@ -50,7 +50,7 @@
         }
         .fab-share:hover { background: var(--primary-color); color: white; transform: scale(1.1); }
 
-        /* Floating YouTube Logo */
+
         .fab-youtube {
             position: fixed; bottom: 100px; right: 30px; z-index: 999;
             width: 60px; height: 60px; border-radius: 50%;
@@ -63,7 +63,7 @@
         .fab-youtube:hover { transform: scale(1.15) rotate(-10deg); box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6); border-color: #ff0000; }
         .fab-youtube:hover img { transform: scale(1); }
 
-        /* Floating Event Tracker */
+
         .event-tracker {
             position: fixed; top: 150px; right: 0; z-index: 998;
             background: var(--surface-color); border: 2px solid #333; border-right: none;
@@ -80,7 +80,7 @@
         .tracker-time { font-weight: bold; font-size: 1.2rem; display: block; margin-top: 5px; text-align: center;}
         .tracker-event-title { text-align: center; display: block; margin-top: 5px; }
 
-        /* Tabs & Container */
+
         .tab-content { display: none; padding-top: var(--nav-height); flex: 1; flex-direction: column; }
         .tab-content.active { display: flex; animation: fadeIn 0.4s ease; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -88,12 +88,12 @@
         h1, h2, h3 { line-height: 1.2; margin-bottom: 20px; }
         h2 { color: var(--primary-color); border-bottom: 1px solid #333; padding-bottom: 12px; margin-top: 50px; font-size: 2.2rem; }
         
-        /* Régi Hero (megtartva a biztonság kedvéért) */
+
         .hero { text-align: center; padding: 140px 20px 100px 20px; background: linear-gradient(to bottom, rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 1)), url('borito.png') center/cover no-repeat; }
         .hero h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); text-shadow: 3px 3px 6px rgba(0,0,0,0.9); margin-bottom: 15px; }
         .hero-border { height: 4px; background: var(--primary-color); width: 100%; }
 
-        /* Tavaszi Animált Cím */
+
         .spring-title-animated {
             background: linear-gradient(90deg, #34d399, #60a5fa, #f472b6, #fbbf24, #34d399);
             background-size: 200% auto;
@@ -105,14 +105,14 @@
         }
         @keyframes springShine { to { background-position: 200% center; } }
 
-        /* Régi Countdown (iOS 26 Style) */
+
         .hero .countdown { display: flex; justify-content: center; gap: 20px; margin: 50px 0 20px 0; }
         .hero .countdown-item { text-align: center; min-width: 100px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 20px 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.05); transition: transform 0.3s ease; }
         .hero .countdown-item:hover { transform: translateY(-5px) scale(1.02); }
         .hero .countdown-item span { display: block; font-size: 3.5rem; font-weight: 800; color: #fff; line-height: 1; text-shadow: 0 4px 20px rgba(255, 255, 255, 0.5); margin-bottom: 5px; }
         .hero .countdown-item small { color: rgba(255, 255, 255, 0.8); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: bold; }
 
-        /* Buttons */
+
         .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: var(--primary-color); color: white; padding: 15px 32px; text-decoration: none; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3); }
         .btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); }
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); box-shadow: none; }
@@ -120,7 +120,7 @@
         .btn-waze { background-color: #33ccff; color: #000; box-shadow: 0 4px 12px rgba(51, 204, 255, 0.3); }
         .btn-google { background-color: #34a853; color: #fff; box-shadow: 0 4px 12px rgba(52, 168, 83, 0.3); }
 
-        /* Grid & Cards - Equal Heights Fixed */
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
         .card { background: var(--surface-color); padding: 30px; border-radius: 12px; border: 1px solid #2a2a2a; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { border-color: var(--primary-color); }
@@ -128,7 +128,7 @@
         .card-narrow { max-width: 700px; margin: 0 auto 30px auto; }
         .card-content-center { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;}
 
-        /* ===== ÚJ HOME TAB DESIGN (Névtérrel elkülönítve) ===== */
+
         .new-hero { position: relative; min-height: 520px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%); display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; padding: 120px 20px 60px; }
         .new-hero-bg { position: absolute; inset: 0; background: url('borito.png') center/cover no-repeat; filter: brightness(0.3); z-index: 0; }
         .new-hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
@@ -154,9 +154,9 @@
         .new-map-img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #2a2a2a; transition: border-color 0.3s, transform 0.3s; }
         .new-map-img:hover { border-color: #3b82f6; transform: scale(1.02); }
         .new-map-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-        /* ========================================================= */
 
-        /* Interactive All-Day Program Buttons */
+
+
         .program-btn {
             background: #111; padding: 15px; border-radius: 8px; text-align: center; cursor: pointer;
             border: 1px solid #333; transition: 0.3s; font-weight: bold; font-size: 1.1rem;
@@ -165,7 +165,7 @@
         }
         .program-btn:hover { background: rgba(255, 255, 255, 0.05); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.3);}
 
-        /* Timeline Horizontal Fixes */
+
         .timeline { 
             list-style: none; padding: 10px 5px 20px 5px; display: flex; overflow-x: auto; 
             gap: 15px; scroll-snap-type: x mandatory; 
@@ -194,7 +194,7 @@
         .timeline li.upcoming .event-countdown { color: var(--text-main); border: 1px solid #444; }
         .timeline li.ongoing .event-countdown { color: var(--success); border: 1px solid var(--success); }
 
-        /* FAQ */
+
         .accordion { background: var(--surface-color); border-radius: 10px; margin-bottom: 15px; border: 1px solid #2a2a2a; }
         .accordion-header { padding: 20px 25px; cursor: pointer; font-weight: bold; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; transition: 0.3s; }
         .accordion-header:hover { background: rgba(255,255,255,0.02); }
@@ -202,7 +202,7 @@
         .accordion.active .accordion-content { padding-bottom: 20px; max-height: 600px; }
         .accordion.active .accordion-header { color: var(--primary-color); border-bottom: 1px solid #2a2a2a; }
 
-        /* Rules List (New Design) */
+
         .rules-list {
             counter-reset: rule;
             list-style: none;
@@ -238,7 +238,7 @@
             font-size: 1rem;
         }
 
-        /* Contact Cards (New Design) */
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -293,7 +293,7 @@
         .contact-btn.red { background: #ef4444; }
         .contact-btn.red:hover { background: #dc2626; }
 
-        /* Gallery and Lightbox */
+
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
         
         .gallery-item { cursor: pointer; border-radius: 10px; overflow: hidden; background: var(--surface-color); border: 2px solid transparent; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; position: relative; }
@@ -302,7 +302,7 @@
         .gallery-img-container img, .gallery-img-container video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
         .gallery-item:hover .gallery-img-container img { transform: scale(1.05); }
         
-        /* Map / Normal images without descriptions */
+
         .gallery-item-no-desc { height: 200px; cursor: pointer; border-radius: 10px; overflow: hidden; position: relative; border: 2px solid #333; transition: border-color 0.3s; }
         .gallery-item-no-desc:hover { border-color: var(--primary-color); }
         .gallery-item-no-desc img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
@@ -314,7 +314,7 @@
             text-align: center; z-index: 10;
         }
 
-        /* Lightbox Design */
+
         #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index: 2000; justify-content:center; align-items:center; flex-direction: column; padding: 20px; }
         #lightbox-content-container { position: relative; max-width: 90%; width: auto; height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
         .lightbox-media { max-width: 100%; max-height: 100%; border-radius: 5px; box-shadow: 0 0 30px rgba(0,0,0,0.8); object-fit: contain; }
@@ -331,11 +331,11 @@
         .download-btn { margin-top: 15px; background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
         .download-btn:hover { background: var(--primary-hover); }
 
-        /* Scroll reveal */
+
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.7s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Footer */
+
         footer { text-align: center; padding: 60px 20px 30px 20px; background: #0a0a0a; border-top: 1px solid #222; color: var(--text-muted); width: 100%; margin-top: auto; }
         .hashtag { cursor: pointer; color: white; font-weight: 900; background: var(--primary-color); padding: 5px 12px; border-radius: 4px; transition: 0.3s; display: inline-block; }
         .hashtag:hover { transform: scale(1.05); background: var(--primary-hover); }
@@ -347,7 +347,7 @@
         .legal-content h3 { color: white; margin-top: 25px; border-bottom: 1px solid #333; padding-bottom: 5px; display: inline-block;}
         .legal-content p { margin-bottom: 15px;}
 
-        /* Inline image grids for detailed cards */
+
         .event-images { 
             display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; padding-bottom: 5px; 
             justify-content: flex-start;
@@ -474,32 +474,34 @@
 
                 </div>
 
-                <div class="new-card reveal" style="margin-top:0">
-                    <div class="new-card-title"><i class="fas fa-map-marker-alt" style="color:var(--accent);margin-right:8px"></i><span class="lang hu">Helyszín és Megközelítés</span><span class="lang en">Location & Access</span></div>
-                    <img src="helyszin.png" alt="Helyszín térkép" class="new-map-img" onclick="openGalleryLightbox(this.src, 'image', '<span class=\'lang hu\'>Zónatérkép</span><span class=\'lang en\'>Zone Map</span>')">
-                    <p style="color:#9ca3af;font-size:.88rem;margin-top:14px;margin-bottom:12px">
-                        <i class="fas fa-info-circle" style="color:#3b82f6;margin-right:6px"></i>
-                        <span class="lang hu">Behajtás az Interspar körforgalom felől a második zebránál. Parkolás a kijelölt területeken.</span>
-                        <span class="lang en">Access from the Interspar roundabout at the second zebra crossing. Parking in designated areas.</span>
-                    </p>
-                    <div class="new-map-btns">
-                        <a href="https://waze.com/ul?q=Kanizsa%20Ar%C3%A9na,%20F%C5%91%20%C3%BAt%2017,%20Nagykanizsa%208800,%20Magyarorsz%C3%A1g&navigate=yes" target="_blank" class="btn btn-waze" style="padding: 7px 14px; font-size: 0.85rem;"><i class="fab fa-waze"></i> Waze</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Kanizsa+Aréna,+Fő+út+17,+Nagykanizsa+8800,+Magyarország" target="_blank" class="btn btn-google" style="padding: 7px 14px; font-size: 0.85rem;"><i class="fab fa-google"></i> Google Maps</a>
+                <div class="new-card-grid">
+                    <div class="new-card reveal" style="margin-top:0">
+                        <div class="new-card-title"><i class="fas fa-map-marker-alt" style="color:var(--accent);margin-right:8px"></i><span class="lang hu">Helyszín és Megközelítés</span><span class="lang en">Location & Access</span></div>
+                        <img src="helyszin.png" alt="Helyszín térkép" class="new-map-img" onclick="openGalleryLightbox(this.src, 'image', '<span class=\'lang hu\'>Zónatérkép</span><span class=\'lang en\'>Zone Map</span>')">
+                        <p style="color:#9ca3af;font-size:.88rem;margin-top:14px;margin-bottom:12px">
+                            <i class="fas fa-info-circle" style="color:#3b82f6;margin-right:6px"></i>
+                            <span class="lang hu">Behajtás az Interspar körforgalom felől a második zebránál. Parkolás a kijelölt területeken.</span>
+                            <span class="lang en">Access from the Interspar roundabout at the second zebra crossing. Parking in designated areas.</span>
+                        </p>
+                        <div class="new-map-btns">
+                            <a href="https://waze.com/ul?q=Kanizsa%20Ar%C3%A9na,%20F%C5%91%20%C3%BAt%2017,%20Nagykanizsa%208800,%20Magyarorsz%C3%A1g&navigate=yes" target="_blank" class="btn btn-waze" style="padding: 7px 14px; font-size: 0.85rem;"><i class="fab fa-waze"></i> Waze</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kanizsa+Aréna,+Fő+út+17,+Nagykanizsa+8800,+Magyarország" target="_blank" class="btn btn-google" style="padding: 7px 14px; font-size: 0.85rem;"><i class="fab fa-google"></i> Google Maps</a>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="new-card reveal">
-                    <div class="new-card-title"><i class="fas fa-shower" style="color:#3b82f6;margin-right:8px"></i><span class="lang hu">Közeli Autómosó</span><span class="lang en">Nearby Car Wash</span></div>
-                    <p style="color:#9ca3af;font-size:.88rem;margin-bottom:12px">
-                        <span class="lang hu">A rendezvényhez legközelebbi autómosó, ha leöblítenéd a gépet! Piros PIN jelöli.</span>
-                        <span class="lang en">Nearest car wash if you want to rinse before entering! Marked with a red PIN.</span>
-                    </p>
-                    <img src="automoso.png" 
+                    
+                    <div class="new-card reveal">
+                        <div class="new-card-title"><i class="fas fa-shower" style="color:#3b82f6;margin-right:8px"></i><span class="lang hu">Közeli Autómosó</span><span class="lang en">Nearby Car Wash</span></div>
+                        <p style="color:#9ca3af;font-size:.88rem;margin-bottom:12px">
+                            <span class="lang hu">A rendezvényhez legközelebbi autómosó, ha leöblítenéd a gépet! Piros PIN jelöli.</span>
+                            <span class="lang en">Nearest car wash if you want to rinse before entering! Marked with a red PIN.</span>
+                        </p>
+                        <img src="automoso.png" 
      alt="Autómosó" 
      class="new-map-img" 
      style="max-height: 300px; width: auto; object-fit: contain; cursor: pointer;" 
      onerror="this.style.display='none'" 
      onclick="openGalleryLightbox(this.src, 'image', '<span class=\'lang hu\'>Közeli autómosó</span><span class=\'lang en\'>Nearby car wash</span>')">
+                    </div>
                 </div>
 
             </div>
@@ -1097,7 +1099,6 @@
     <script>
         let currentLang = 'hu';
 
-        // --- 1. Language Toggle ---
         function toggleLanguage() {
             if (currentLang === 'hu') {
                 currentLang = 'en';
@@ -1109,7 +1110,6 @@
             updateEventTracker();
         }
 
-        // --- 2. Tabs Engine ---
         function openTab(id) {
             document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.tab-link').forEach(b => b.classList.remove('active'));
@@ -1128,7 +1128,6 @@
             setTimeout(reveal, 100);
         }
 
-        // --- 3. Copy URL ---
         function copyUrl() {
             navigator.clipboard.writeText(window.location.href).then(() => {
                 const msg = currentLang === 'hu' ? 'A weboldal linkjét sikeresen másoltuk a vágólapra!' : 'Website link successfully copied to clipboard!';
@@ -1136,7 +1135,6 @@
             }).catch(err => console.error('Hiba:', err));
         }
 
-        // --- 4. Copy Hashtag ---
         function copyHashtag() {
             navigator.clipboard.writeText("#TavaszNyito2026").then(() => {
                 const btn = document.getElementById('hashtagBtn');
@@ -1146,7 +1144,6 @@
             });
         }
 
-        // --- 5. Főoldali Fix Visszaszámláló ---
         const eventDateString = "2026-05-09T09:00:00"; 
         const targetDate = new Date(eventDateString).getTime();
 
@@ -1160,7 +1157,6 @@
             document.getElementById("cd-secs").innerText = Math.floor((d % (1000 * 60)) / 1000).toString().padStart(2, '0');
         }, 1000);
 
-        // --- 6. Event Tracker (Másodperces Real-time visszaszámláló) ---
         function formatTimeSecs(totalSecs) {
             const d = Math.floor(totalSecs / 86400);
             const h = Math.floor((totalSecs % 86400) / 3600);
@@ -1204,7 +1200,6 @@
                 item.classList.remove('upcoming', 'ongoing');
                 countdownElem.innerHTML = "";
 
-                // Dátumok generálása az aznapi fix idősávokra
                 const startTime = new Date(`${eventDateOnly}T${startStr}:00`).getTime();
                 const endTime = new Date(`${eventDateOnly}T${endStr}:00`).getTime();
                 const currentTime = now.getTime();
@@ -1270,7 +1265,6 @@
             }
         }
 
-        // --- 7. Scroll reveal ---
         window.addEventListener('scroll', reveal);
         function reveal() {
             document.querySelectorAll('.reveal').forEach(r => {
@@ -1279,7 +1273,6 @@
         }
         setTimeout(reveal, 1200);
 
-        // --- 8. Zoom Logic for Lightbox ---
         function setupZoom(imgElement) {
             let currentScale = 1;
             imgElement.style.transition = 'transform 0.1s ease-out';
@@ -1307,7 +1300,6 @@
             });
         }
 
-        // --- 9. Lightbox (Kép és Videó Támogatással + Letöltés + Leírás + Zoom + Vízjel) ---
         function openGalleryLightbox(src, type, descriptionText) {
             const container = document.getElementById('lightbox-content-container');
             const descContainer = document.getElementById('lightbox-desc');
@@ -1359,7 +1351,6 @@
         }
 
         function closeLightbox(e) { 
-            // Csak akkor zárja be, ha a háttérre kattint, de ne a képre/videóra/gombra/szövegre
             if(e.target.id === 'lightbox' || e.target.id === 'lightbox-content-container'){
                 closeLightboxExplicit();
             }
@@ -1370,7 +1361,6 @@
             document.getElementById('lightbox-content-container').innerHTML = ''; 
         }
 
-        // --- 10. FAQ Toggle ---
         function toggleAccordion(e) { 
             const headerIcon = e.querySelector('i');
             e.parentElement.classList.toggle('active');
@@ -1385,3 +1375,4 @@
     </script>
 </body>
 </html>
+
